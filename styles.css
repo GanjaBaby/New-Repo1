@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'CustomFont';
-    src: url('/Users/devsharma/Desktop/VS Code Library/Timepass/04b_30/04B_30__.TTF');
+    src: url('/Users/devsharma/Desktop/VS Code Library/Timepass/ClimateCrisis-Regular-VariableFont_YEAR.ttf');
     font-weight: normal;
     font-style: normal;
 }
@@ -11,9 +11,9 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
-    font-family: 'CustomFont', Arial, sans-serif;
+    font-family: 'CustomFont';
     background-color: #F7C7ED;
-    transition: background-color 0.5s ease; /* Add a transition for the background-color property */
+    transition: background-color 1s ease; /* Add a transition for the background-color property */
 }
 
 .container {
