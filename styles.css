@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'CustomFont';
-    src: url('ClimateCrisis-Regular-VariableFont_YEAR.ttf');
+    src: url('https://github.com/GanjaBaby/Timepass/releases/download/untagged-745b896b7e7108b249e0/04B_30__.TTF');
     font-weight: normal;
     font-style: normal;
 }
@@ -11,7 +11,7 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
-    font-family: 'CustomFont';
+    font-family: 'CustomFont', sans-serif;
     background-color: #F7C7ED;
     transition: background-color 1s ease; /* Add a transition for the background-color property */
 }
