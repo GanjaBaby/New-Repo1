@@ -39,19 +39,33 @@ function allowClick() {
 
 // Start playing the audio when the DOM content is fully loaded
 document.addEventListener("DOMContentLoaded", function() {
+    // Start playing the audio
     startAudio();
 });
 
-// Function to start audio
 function startAudio() {
     var audio = document.getElementById("backgroundAudio");
+    
     if (audio) {
-        audio.muted = false;
-        audio.play();
+        // Check if the audio is loaded before attempting to play
+        audio.addEventListener('canplaythrough', function() {
+            // Unmute and set volume
+            audio.muted = false;
+            audio.volume = 0.5; // Adjust the volume as needed
+
+            // Play the audio
+            audio.play()
+                .then(function() {
+                    console.log("Audio is playing");
+                })
+                .catch(function(error) {
+                    console.error("Error playing audio:", error);
+                });
+        });
+        
+        // If the audio is not supported or encountered an error
+        audio.addEventListener('error', function(error) {
+            console.error("Audio error:", error);
+        });
     }
 }
-
-// Immediately invoke startAudio to play audio when the page loads
-startAudio();
-
-// Additional functions or code as needed
