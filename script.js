@@ -51,7 +51,7 @@ function startAudio() {
         audio.addEventListener('canplaythrough', function() {
             // Unmute and set volume
             audio.muted = false;
-            audio.volume = 0.5; // Adjust the volume as needed
+            audio.volume = 1; // Adjust the volume as needed
 
             // Play the audio
             audio.play()
