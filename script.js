@@ -47,7 +47,6 @@ function startAudio() {
     var audio = document.getElementById("backgroundAudio");
     
     if (audio) {
-        // Check if the audio is loaded before attempting to play
         audio.addEventListener('canplaythrough', function() {
             // Unmute and set volume
             audio.muted = false;
@@ -62,10 +61,11 @@ function startAudio() {
                     console.error("Error playing audio:", error);
                 });
         });
-        
-        // If the audio is not supported or encountered an error
+
         audio.addEventListener('error', function(error) {
             console.error("Audio error:", error);
         });
+    } else {
+        console.error("Audio element not found");
     }
 }
