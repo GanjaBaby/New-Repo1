@@ -19,7 +19,7 @@ function moveNoButton() {
 
 function preventClick() {
     if (allowNoButtonClick) {
-        alert("You clicked 'No', but you need to click 'Yes' first!");
+        alert("It was a prank!, there isn't any NO button hahahahaha!");
     }
 }
 
